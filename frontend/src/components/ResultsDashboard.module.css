@@ -1,0 +1,229 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ── Banner ───────────────────────────────────────────────── */
+.banner {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  text-align: center;
+}
+
+.bannerTitle {
+  font-size: 2rem;
+  margin-bottom: var(--space-lg);
+}
+
+.bannerStats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statDivider {
+  width: 1px;
+  height: 32px;
+  background: var(--border-subtle);
+}
+
+/* ── Warnings ─────────────────────────────────────────────── */
+.warnings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.warning {
+  padding: 10px 16px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--accent-amber);
+  font-size: 0.85rem;
+}
+
+/* ── Tab Content ──────────────────────────────────────────── */
+.tabContent {
+  min-height: 400px;
+}
+
+/* ── Overview Grid ────────────────────────────────────────── */
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-lg);
+}
+
+.overviewSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ── Recommendations ──────────────────────────────────────── */
+.recsCard {
+  padding: var(--space-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.recItem {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.recItem:last-child {
+  border-bottom: none;
+}
+
+.recHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.recDesc {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.priority {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.high {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--accent-red);
+}
+
+.medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-amber);
+}
+
+.low {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-green);
+}
+
+/* ── Budget Page ──────────────────────────────────────────── */
+.budgetPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.budgetDetails {
+  padding: var(--space-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.budgetLabel {
+  color: var(--text-secondary);
+}
+
+.budgetValue {
+  font-weight: 600;
+}
+
+.budgetTotal {
+  font-weight: 700;
+  font-size: 1rem;
+  border-top: 2px solid var(--border-card);
+  border-bottom: none;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-md);
+}
+
+.budgetRemaining {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+/* ── Best Time ────────────────────────────────────────────── */
+.bestTime {
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.bestTime h3 {
+  margin-bottom: var(--space-md);
+}
+
+.bestTimeMonths {
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.bestTimeReason {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+  .budgetPage {
+    grid-template-columns: 1fr;
+  }
+  .bannerStats {
+    gap: var(--space-md);
+  }
+}

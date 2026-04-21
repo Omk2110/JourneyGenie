@@ -1,0 +1,86 @@
+.main {
+  min-height: 100vh;
+  padding-bottom: var(--space-3xl);
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding: var(--space-3xl) 0 var(--space-2xl);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.logoIcon {
+  font-size: 2.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.logoText {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── Error ────────────────────────────────────────────────── */
+.error {
+  max-width: 600px;
+  margin: var(--space-2xl) auto;
+  padding: var(--space-lg);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: fadeInUp 0.4s ease;
+}
+
+.errorContent {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.errorContent h3 {
+  color: var(--accent-red);
+  margin-bottom: 4px;
+}
+
+.errorContent p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.errorIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Result Header ────────────────────────────────────────── */
+.resultHeader {
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: 1.8rem;
+  }
+
+  .header {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+}

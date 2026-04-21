@@ -1,0 +1,71 @@
+.container {
+  padding: var(--space-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+}
+
+.compact {
+  padding: var(--space-md);
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Full-page mode: use 2-col grid */
+.container:not(.compact) .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.card {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 6px;
+}
+
+.cardIcon {
+  font-size: 1rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.cardDesc {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.cardCategory {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}

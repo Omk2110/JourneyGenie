@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+}
+
+.card {
+  max-width: 560px;
+  width: 100%;
+  padding: var(--space-2xl);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.spinnerWrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-lg);
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--border-subtle);
+  border-top-color: var(--accent-blue);
+  border-right-color: var(--accent-purple);
+  animation: spin 1.2s linear infinite;
+}
+
+.spinnerIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.agent {
+  color: var(--accent-blue);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xl);
+  min-height: 1.4em;
+}
+
+/* ── Pipeline ─────────────────────────────────────────────── */
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.pipelineNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  opacity: 0.4;
+}
+
+.pipelineNode.past {
+  opacity: 0.7;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.pipelineNode.active {
+  opacity: 1;
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--accent-blue);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.nodeIcon {
+  font-size: 1.2rem;
+}
+
+.nodeName {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pipelineNode.active .nodeName {
+  color: var(--accent-blue);
+}
+
+.pipelineNode.past .nodeName {
+  color: var(--accent-green);
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}

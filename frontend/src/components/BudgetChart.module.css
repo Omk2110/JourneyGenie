@@ -1,0 +1,93 @@
+.container {
+  padding: var(--space-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+}
+
+.large {
+  padding: var(--space-xl);
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ── Chart ────────────────────────────────────────────────── */
+.chartWrap {
+  position: relative;
+  height: 200px;
+  margin-bottom: var(--space-lg);
+}
+
+.large .chartWrap {
+  height: 280px;
+}
+
+.chartCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.chartTotal {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.large .chartTotal {
+  font-size: 1.6rem;
+}
+
+.chartLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Legend ────────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.82rem;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  flex: 1;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+}
+
+.legendValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.legendPct {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  min-width: 30px;
+  text-align: right;
+}

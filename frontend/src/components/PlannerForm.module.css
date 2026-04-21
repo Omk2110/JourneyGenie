@@ -1,0 +1,206 @@
+.form {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.formTitle {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-xs);
+}
+
+.formDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.inputLarge {
+  font-size: 1.15rem;
+  padding: 14px 18px;
+}
+
+/* ── Number Input ─────────────────────────────────────────── */
+.numberInput {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+}
+
+.numberInput .input {
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.numberInput .input::-webkit-outer-spin-button,
+.numberInput .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.numBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.numBtn:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--accent-blue);
+}
+
+.numLabel {
+  position: absolute;
+  right: 48px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* ── Budget ───────────────────────────────────────────────── */
+.budgetWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.budgetInput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.budgetInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transition: transform 0.2s;
+}
+
+.budgetInput::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.budgetInput::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  cursor: pointer;
+  border: none;
+}
+
+.budgetInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.budgetAmount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--accent-blue);
+}
+
+.budgetPpd {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Preferences ──────────────────────────────────────────── */
+.section {
+  margin-top: var(--space-lg);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+/* ── Advanced ─────────────────────────────────────────────── */
+.advancedToggle {
+  margin-top: var(--space-lg);
+  padding: 8px 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.advancedToggle:hover {
+  color: var(--text-primary);
+}
+
+.advancedFields {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ── Submit ───────────────────────────────────────────────── */
+.submitBtn {
+  width: 100%;
+  margin-top: var(--space-xl);
+  padding: 16px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    padding: var(--space-lg);
+  }
+}
